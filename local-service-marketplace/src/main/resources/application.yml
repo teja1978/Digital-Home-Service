@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=marketplace;encrypt=true;trustServerCertificate=true;
+    username: sa
+    password: Projects@123
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  liquibase:
+    change-log: 'liquibase-change-log-main.yml'
+    drop-first: false
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl

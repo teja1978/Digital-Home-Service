@@ -1,0 +1,16 @@
+<!-- Offerings section -->
+<div class="offerings-section">
+  <!-- Flex container for displaying offerings -->
+  <div class="flex flex-wrap justify-start items-center">
+      <!-- Loop through each offering in 'offerings' array and display as a tile -->
+      <div *ngFor="let offering of offerings" class="offering-tile" (click)="onServiceClick(offering)">
+          <!-- Image for the offering -->
+          <img src="{{offering.path}}" class="offering-image">
+          <!-- Offering content -->
+          <div class="offering-content">
+              <!-- Title of the offering -->
+              <h3 class="offering-title">{{ offering.name }}</h3>
+          </div>
+      </div>
+  </div>
+</div>
