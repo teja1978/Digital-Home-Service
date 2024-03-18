@@ -1,0 +1,32 @@
+<!-- <app-navigation-bar></app-navigation-bar>
+<app-side-bar (serviceClickedEvent)="showFromButton()"></app-side-bar>
+
+<button (click)="openServiceForm()" id="openModal" *ngIf="showFormButton" style="margin-left: 500px;" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 focus:outline-none">
+Open Service Form
+</button>
+
+<app-service-form *ngIf="showServiceForm" (serviceFormClickedEvent)="openServiceForm()" ></app-service-form> -->
+
+<div class="flex h-screen w-full overflow-hidden">
+    <!-- Sidebar -->
+    <!-- <app-sidebar></app-sidebar> -->
+  
+    <div class="flex grow flex-col content-start overflow-hidden bg-gray-100 dark:bg-night-800">
+      <!-- Header -->
+      <!-- <app-navbar></app-navbar> -->
+      <app-navigation-bar></app-navigation-bar>
+      <!-- main content -->
+      <div
+        id="main-content"
+        class="scrollbar-thumb-rounded scrollbar-track-rounded grow overflow-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-gray-100 dark:scrollbar-thumb-night-700 dark:scrollbar-track-night-800">
+        <app-maincontent></app-maincontent>
+      </div>
+  
+      <!-- footer -->
+      <!-- <app-footer></app-footer> -->
+  
+      <!-- Bottom bar -->
+      <!-- <app-bottom-navbar></app-bottom-navbar> -->
+    </div>
+  </div>
+  
